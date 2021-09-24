@@ -8,6 +8,7 @@ package Person_Profile;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import javax.swing.Icon;
 import javax.swing.JOptionPane;
 
 /**
@@ -19,7 +20,7 @@ public class Profile {
     private String name;
     //geographic data
     String city;
-    String DOB ;
+    Date DOB ;
     String telephone;
     String fax_num;
     String email_addr;
@@ -33,7 +34,7 @@ public class Profile {
     String linkedIn;
     String IPAddr;
     String bio_identity;
-    String Photo;
+    Icon Photo;
     String Unique_Identifier;
 
     public Long getBank_acc_num() {
@@ -92,14 +93,14 @@ public class Profile {
         this.bio_identity = bio_identity;
     }
 
-    public String getPhoto() {
+    public Icon getPhoto() {
         return Photo;
     }
 
-    public void setPhoto(String Photo) {
+    public void setPhoto(Icon Photo) {
         this.Photo = Photo;
     }
-
+    
     public String getUnique_Identifier() {
         return Unique_Identifier;
     }
@@ -107,9 +108,6 @@ public class Profile {
     public void setUnique_Identifier(String Unique_Identifier) {
         this.Unique_Identifier = Unique_Identifier;
     }
-    
-    
-    
 
     public String getName() {
         return name;
@@ -117,7 +115,7 @@ public class Profile {
 
     public void setName(String name) {
         
-        if (name.matches("^[A-Za-z]\\w{5,29}$")) {
+        if (name.matches("[A-Za-z]+")) {
             this.name = name;
         }
         else {
@@ -139,24 +137,11 @@ public class Profile {
         }
     }
 
-    public String getDOB() {
+    public Date getDOB() {
         return DOB;
     }
 
-    public void setDOB(String DOB) {
-        
-        SimpleDateFormat sdfrmt = new SimpleDateFormat("MM/dd/yyyy");
-        sdfrmt.setLenient(false);
-        try
-	    {
-	        Date javaDate = sdfrmt.parse(DOB); 
-	        System.out.println(DOB+" is valid date format");
-	    }
-        catch (ParseException e)
-	    {
-	        System.out.println(DOB+" is Invalid Date format");
-	        JOptionPane.showMessageDialog(null, "Please enter a valid Date.");
-	    }
+    public void setDOB(Date DOB) {
         this.DOB = DOB;
     }
 
