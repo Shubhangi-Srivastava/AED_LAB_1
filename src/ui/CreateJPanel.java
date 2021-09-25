@@ -61,7 +61,6 @@ public class CreateJPanel extends javax.swing.JPanel {
         lblDeviceIdentifier = new javax.swing.JLabel();
         lblLinkedIn = new javax.swing.JLabel();
         lblIPAddr = new javax.swing.JLabel();
-        lblFingerPrnt = new javax.swing.JLabel();
         lblImage = new javax.swing.JLabel();
         lblUniqueID = new javax.swing.JLabel();
         txtName = new javax.swing.JTextField();
@@ -77,7 +76,6 @@ public class CreateJPanel extends javax.swing.JPanel {
         deviceIdenttxt = new javax.swing.JTextField();
         txtLinkedIn = new javax.swing.JTextField();
         txtIPAddr = new javax.swing.JTextField();
-        txtFingerPrint = new javax.swing.JTextField();
         txtUniqueID = new javax.swing.JTextField();
         btnSave = new javax.swing.JButton();
         txtBankAccNum = new javax.swing.JTextField();
@@ -120,8 +118,6 @@ public class CreateJPanel extends javax.swing.JPanel {
         lblLinkedIn.setText("LinkedIn Profile :");
 
         lblIPAddr.setText("IP Address :");
-
-        lblFingerPrnt.setText("FingerPrint :");
 
         lblImage.setText("Image :");
 
@@ -180,9 +176,9 @@ public class CreateJPanel extends javax.swing.JPanel {
                 .addComponent(btnSave)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(lblName)
                             .addComponent(lblGeographicData)
@@ -200,7 +196,6 @@ public class CreateJPanel extends javax.swing.JPanel {
                             .addComponent(lblFaxNum)
                             .addComponent(lblHealthPlanBenefitNum)
                             .addComponent(lblVehicleIdentifier)
-                            .addComponent(lblFingerPrnt)
                             .addComponent(lblImage))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -224,20 +219,17 @@ public class CreateJPanel extends javax.swing.JPanel {
                                     .addComponent(deviceIdenttxt)
                                     .addComponent(btnImg, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(txtLinkedIn)
-                                    .addComponent(txtIPAddr)
-                                    .addComponent(txtFingerPrint))
+                                    .addComponent(txtIPAddr))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(label, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(LblTitle, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addComponent(LblTitle, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
 
-        layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {lblBankAcNum, lblDOB, lblDeviceIdentifier, lblEmailAddr, lblFaxNum, lblFingerPrnt, lblGeographicData, lblHealthPlanBenefitNum, lblIPAddr, lblImage, lblLicenseNum, lblLinkedIn, lblMedicalRecNum, lblName, lblSSN, lblTelNum, lblUniqueID, lblVehicleIdentifier});
+        layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {lblBankAcNum, lblDOB, lblDeviceIdentifier, lblEmailAddr, lblFaxNum, lblGeographicData, lblHealthPlanBenefitNum, lblIPAddr, lblImage, lblLicenseNum, lblLinkedIn, lblMedicalRecNum, lblName, lblSSN, lblTelNum, lblUniqueID, lblVehicleIdentifier});
 
-        layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {deviceIdenttxt, txtBankAccNum, txtCity, txtEmail, txtFaxNum, txtFingerPrint, txtHealthBenNum, txtIPAddr, txtLicenseNum, txtLinkedIn, txtName, txtSSN, txtUniqueID, txtVehicleIdent, txttelnum});
+        layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {deviceIdenttxt, txtBankAccNum, txtCity, txtEmail, txtFaxNum, txtHealthBenNum, txtIPAddr, txtLicenseNum, txtLinkedIn, txtName, txtSSN, txtUniqueID, txtVehicleIdent, txttelnum});
 
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -251,51 +243,49 @@ public class CreateJPanel extends javax.swing.JPanel {
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(lblName)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(lblGeographicData)
-                                .addGap(8, 8, 8)
-                                .addComponent(lblDOB)
-                                .addGap(8, 8, 8)
-                                .addComponent(lblTelNum)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(lblEmailAddr)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(lblFaxNum)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(lblSSN)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(lblMedicalRecNum)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(lblHealthPlanBenefitNum)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(lblBankAcNum, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(lblLicenseNum))
+                                .addComponent(lblGeographicData))
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(txtName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(txtCity, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(txtCity, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(4, 4, 4)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(lblDOB)
+                                .addGap(7, 7, 7)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(lblTelNum)
+                                    .addComponent(txttelnum, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(lblEmailAddr)
+                                    .addComponent(txtFaxNum, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(lblFaxNum)
+                                    .addComponent(txtEmail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(lblSSN)
+                                    .addComponent(txtSSN, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(lblMedicalRecNum)
+                                    .addComponent(txtMedicalRecNum, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(lblHealthPlanBenefitNum)
+                                    .addComponent(txtHealthBenNum, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(lblBankAcNum, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(txtBankAccNum, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(lblLicenseNum))
+                            .addGroup(layout.createSequentialGroup()
                                 .addComponent(txtDOB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                                .addComponent(txttelnum, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                                .addComponent(txtFaxNum, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                                .addComponent(txtEmail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addGap(36, 36, 36))
-                                            .addComponent(txtSSN, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addGap(36, 36, 36))
-                                    .addComponent(txtMedicalRecNum, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(txtHealthBenNum, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(txtBankAccNum, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(txtLicenseNum, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(270, 270, 270)
+                                .addComponent(txtLicenseNum, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(txtVehicleIdent, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -309,22 +299,16 @@ public class CreateJPanel extends javax.swing.JPanel {
                             .addComponent(lblLinkedIn)
                             .addComponent(txtLinkedIn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(lblIPAddr)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(lblFingerPrnt)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(lblIPAddr)
+                            .addComponent(txtIPAddr, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(lblImage)
                             .addComponent(btnImg)))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(428, 428, 428)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(txtIPAddr, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(txtFingerPrint, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(12, 12, 12))
-                            .addComponent(label, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addGap(488, 488, 488)
+                        .addComponent(label, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(lblUniqueID)
@@ -334,9 +318,9 @@ public class CreateJPanel extends javax.swing.JPanel {
                 .addContainerGap())
         );
 
-        layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {lblBankAcNum, lblDOB, lblDeviceIdentifier, lblEmailAddr, lblFaxNum, lblFingerPrnt, lblGeographicData, lblHealthPlanBenefitNum, lblIPAddr, lblImage, lblLicenseNum, lblLinkedIn, lblMedicalRecNum, lblName, lblSSN, lblTelNum, lblUniqueID, lblVehicleIdentifier});
+        layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {lblBankAcNum, lblDOB, lblDeviceIdentifier, lblEmailAddr, lblFaxNum, lblGeographicData, lblHealthPlanBenefitNum, lblIPAddr, lblImage, lblLicenseNum, lblLinkedIn, lblMedicalRecNum, lblName, lblSSN, lblTelNum, lblUniqueID, lblVehicleIdentifier});
 
-        layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {deviceIdenttxt, txtBankAccNum, txtCity, txtEmail, txtFaxNum, txtFingerPrint, txtHealthBenNum, txtIPAddr, txtLinkedIn, txtMedicalRecNum, txtName, txtSSN, txtVehicleIdent, txttelnum});
+        layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {deviceIdenttxt, txtBankAccNum, txtEmail, txtFaxNum, txtHealthBenNum, txtIPAddr, txtLinkedIn, txtMedicalRecNum, txtName, txtSSN, txtVehicleIdent, txttelnum});
 
     }// </editor-fold>//GEN-END:initComponents
 
@@ -375,7 +359,6 @@ public class CreateJPanel extends javax.swing.JPanel {
         profile.setDevice_identifier(deviceIdenttxt.getText());
         profile.setLinkedIn(txtLinkedIn.getText());
         profile.setIPAddr(txtIPAddr.getText());
-        profile.setBio_identity(txtFingerPrint.getText());
         profile.setPhoto(label.getIcon());
         profile.setUnique_Identifier(txtUniqueID.getText());   
         
@@ -419,7 +402,6 @@ public class CreateJPanel extends javax.swing.JPanel {
     private javax.swing.JLabel lblDeviceIdentifier;
     private javax.swing.JLabel lblEmailAddr;
     private javax.swing.JLabel lblFaxNum;
-    private javax.swing.JLabel lblFingerPrnt;
     private javax.swing.JLabel lblGeographicData;
     private javax.swing.JLabel lblHealthPlanBenefitNum;
     private javax.swing.JLabel lblIPAddr;
@@ -437,7 +419,6 @@ public class CreateJPanel extends javax.swing.JPanel {
     private com.toedter.calendar.JDateChooser txtDOB;
     private javax.swing.JTextField txtEmail;
     private javax.swing.JTextField txtFaxNum;
-    private javax.swing.JTextField txtFingerPrint;
     private javax.swing.JTextField txtHealthBenNum;
     private javax.swing.JTextField txtIPAddr;
     private javax.swing.JTextField txtLicenseNum;

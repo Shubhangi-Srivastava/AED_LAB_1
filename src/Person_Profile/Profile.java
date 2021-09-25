@@ -33,7 +33,6 @@ public class Profile {
     String device_identifier;
     String linkedIn;
     String IPAddr;
-    String bio_identity;
     Icon Photo;
     String Unique_Identifier;
 
@@ -85,13 +84,6 @@ public class Profile {
      *
      * @return
      */
-    public String getBio_identity() {
-        return bio_identity;
-    }
-
-    public void setBio_identity(String bio_identity) {
-        this.bio_identity = bio_identity;
-    }
 
     public Icon getPhoto() {
         return Photo;
@@ -106,8 +98,17 @@ public class Profile {
     }
 
     public void setUnique_Identifier(String Unique_Identifier) {
+        
+        if(Unique_Identifier.matches("^[A-PR-WYa-pr-wy][1-9]\\d"
+                + "\\s?\\d{4}[1-9]$")) {
         this.Unique_Identifier = Unique_Identifier;
     }
+       else {
+                     JOptionPane.showMessageDialog(null, "Please enter a passport number.");
+
+        }
+    }
+    
 
     public String getName() {
         return name;
@@ -151,11 +152,13 @@ public class Profile {
 
     public void setTelephone(String telephone) {
         
-        if (telephone.matches("\\d{3}-\\d{3}-\\d{4}")) {
-             this.telephone = telephone;  
+        
+    if(telephone.matches("^[0-9]*$") && telephone.length()==10) {
+             this.telephone = telephone;    
         }
-        else {
-            JOptionPane.showMessageDialog(null, "Please enter valid phone number");
+    else if(String.valueOf(telephone).matches("[A-Za-z]+")) {
+        
+         JOptionPane.showMessageDialog(null, "Please enter valid Telephone Number");    
         }
     }
 
@@ -164,7 +167,15 @@ public class Profile {
     }
 
     public void setFax_num(String fax_num) {
-        this.fax_num = fax_num;
+        
+        if(fax_num.matches("\\+[0-9]{1,3}\\([0-9]{3}\\)[0-9]{7}")) { 
+
+        this.fax_num = fax_num; 
+    }
+        else {
+           JOptionPane.showMessageDialog(null, "Please enter valid fax number like +895(194)6165163");
+
+        }
     }
 
     public String getEmail_addr() {
@@ -200,7 +211,15 @@ public class Profile {
     }
 
     public void setMedicaid_rec_num(String medicaid_rec_num) {
+        
+        if(medicaid_rec_num.matches("[M-m][R-r]\\d{5,6}")) {
         this.medicaid_rec_num = medicaid_rec_num;
+    }
+        else {
+           JOptionPane.showMessageDialog(null, "Please enter valid Medical Record Number like MR123456");
+
+        }
+        
     }
 
     public String getHealth_plan_ben_num() {
@@ -208,7 +227,14 @@ public class Profile {
     }
 
     public void setHealth_plan_ben_num(String health_plan_ben_num) {
+        
+        if(health_plan_ben_num.matches("\\b\\d[A-Z]{2}\\d-[A-Z]{2}\\d-[A-Z]{2}\\d{2}\\b")) {
         this.health_plan_ben_num = health_plan_ben_num;
+    }
+        else {
+           JOptionPane.showMessageDialog(null, "Please enter valid Health Beneficiary number example 1EG4-TE5-MK73");
+
+        } 
     }
 
     
@@ -219,8 +245,13 @@ public class Profile {
 
     public void setLicense_num(String license_num) {
         
-        //if( license_num.matches(name)
+        if(license_num.matches("^[A-Z](?:\\d[- ]*){14}$")) {
         this.license_num = license_num;
+    }
+        else {
+          JOptionPane.showMessageDialog(null, "Please enter valid License Number like D61014070660905");
+
+        }
     }
 
     public String getVehicle_identifier() {
@@ -228,14 +259,23 @@ public class Profile {
     }
 
     public void setVehicle_identifier(String vehicle_identifier) {
+        
+        if(vehicle_identifier.matches("\\b[(A-H|J-N|P|R-Z|0-9)]{17}\\b")) {
         this.vehicle_identifier = vehicle_identifier;
     }
+        else {
+         JOptionPane.showMessageDialog(null, "Please enter valid Vehicle number (I,O,Q not allowed) example: SALVA2AE4EH877322");
 
+        }
+        
+    }
+    
     public String getDevice_identifier() {
         return device_identifier;
     }
 
     public void setDevice_identifier(String device_identifier) {
+        
         this.device_identifier = device_identifier;
     }    
 }
